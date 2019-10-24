@@ -1,0 +1,13 @@
+/* #region header */
+.profile{
+    background: url("../images/profile.jpg");
+    background-size:     cover;
+    background-repeat:   no-repeat;
+    background-position: center center;
+    margin-bottom:20px;
+    display:inline-block;
+    border-radius: 3px;
+    width:200px;
+    height:200px;
+}
+/* #endregion */
