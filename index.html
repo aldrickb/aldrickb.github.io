@@ -40,7 +40,7 @@
 </head>
 <body>
     <!-- #region header -->
-    <header class="home section-parallax parallaxBg" style="background-image: url(images/header-background.jpg);">
+    <header id="top" class="home section-parallax parallaxBg" style="background-image: url(images/header-background.jpg);">
         <div class="layer"></div>
         <div class="container parallax-content">
             <div class="row">
@@ -59,28 +59,26 @@
             <!-- Zetta Menu -->
             <ul id="nav" class="zetta-menu zm-response-switch zm-full-width zm-effect-slide-top">
                 <li class="zm-logo">
-                    <a href="#onepage"><img src="images/logo.png" alt="aldrickb logo" /></a>
+                    <a href="#" data-scroll="top"><img src="images/logo.png" alt="aldrickb logo" /></a>
                 </li>
 
-                <li class="zm-right-item"><a href="#" data-scroll="menu-1">Menu 1</a></li>
-                <li class="zm-right-item"><a href="#" data-scroll="menu-2">Menu 2</a></li>
-                <li class="zm-right-item"><a href="#" data-scroll="menu-3">Menu 3</a></li>
-                <li class="zm-right-item"><a href="#" data-scroll="menu-4">Menu 4</a></li>
-                <li class="zm-right-item"><a href="#" data-scroll="menu-5">Menu 5</a></li>
+                <li class="zm-right-item"><a href="#" data-scroll="contact-me">Contact Me</a></li>
+                <li class="zm-right-item"><a href="#" data-scroll="portfolio">Portfolio</a></li>
+                <li class="zm-right-item"><a href="#" data-scroll="about-me">About Me</a></li>
             </ul>
         </div>
     </nav>
     <!-- #endregion -->
 
     <!-- #region about me -->
-    <header id="header" class="section-parallax parallaxBg" style="background-image: url(images/about-me-header.jpg);">
+    <header id="about-me" class="section-parallax parallaxBg" style="background-image: url(images/about-me-header.jpg);">
         <div class="layer"></div>
         <div class="container parallax-content text-center">
             <h1 class="wow tada" data-wow-duration="1s">Hi!</h1>
             <p>Welcome to my website! Let me start by introducing myself.</p>
         </div><!-- end container -->
     </header>
-    <section id="about-me" class="content">
+    <section class="content">
         <div class="container">
             <div class="row">
                 <div class="col-sm-12 col-md-5 padd">
@@ -114,7 +112,7 @@
     <!-- #endregion -->
 
     <!-- #region portfolio -->
-    <header class="section-parallax parallaxBg" style="background-image: url(images/coming-soon.jpg);">
+    <header id="portfolio" class="section-parallax parallaxBg" style="background-image: url(images/coming-soon.jpg);">
         <div class="layer"></div>
         <div class="container parallax-content text-center">
             <h1>My Portfolio</h1>
@@ -124,7 +122,7 @@
     <!-- #endregion -->
 
     <!-- #region contact me-->
-    <header class="section-parallax parallaxBg" style="background-image: url(images/contact-us-header.jpg);">
+    <header id="contact-me" class="section-parallax parallaxBg" style="background-image: url(images/contact-us-header.jpg);">
         <div class="layer"></div>
         <div class="container parallax-content text-center">
             <h1>Woah, done already?</h1>
