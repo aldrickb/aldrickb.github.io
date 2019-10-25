@@ -115,6 +115,55 @@
     </section>
     <!-- #endregion -->
 
+    <!-- #region contact me-->
+    <header class="section-parallax parallaxBg" style="background-image: url(images/contact-us-header.jpg);">
+    	<div class="layer"></div>
+        <div class="container parallax-content text-center">
+        	<h1>Woah, done already?</h1>
+            <p>Please leave a message for me for your inquiries or project proposals.</p>
+        </div><!-- end container -->
+    </header>
+    <section class="content">
+    	<div class="container">
+        	<div class="row">
+                <div class="col-md-5 padd">
+                	<h5 class="heading heading-v3"><span>Visit Us</span></h5>
+                    <p>Lid est laborum dolo rumes fugats untras. Etharums ser quidem rerum facilis dolores nemis omnis fugats vitaes nemo minima rerums unsers sadips amets.</p>
+                    <hr class="divider-dashed" />
+                    <address>
+                        <p>
+                            <i class="fa fa-map-marker"></i>&nbsp;77 Mass. Ave., E14/E15<br>
+                            Seattle, MA 02139-4307 USA <br>
+                            <i class="fa fa-phone"></i>&nbsp;012.345.6789 <br>
+                            <i class="fa fa-envelope"></i>&nbsp;<a href="mailto:mantii_ju@hotmail.com">info@piksell.com</a>
+                        </p>
+                    </address>
+                    <hr class="divider-dashed" />
+                    Monday - Friday: <strong>9:00 am - 5:00 pm </strong><br />Saturday - Sunday: <strong>Closed</strong>
+                </div>
+                <div class="col-md-7 padd">
+                	<h5 class="heading heading-v3"><span>Get in touch</span></h5>
+                    <form role="form">
+                        <div class="form-group">
+                            <input type="text" class="form-control" id="inputExampleFirstName1" placeholder="Name">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control" id="inputExampleEmail4" placeholder="Email">
+                        </div>
+                        <div class="form-group">
+                            <textarea class="form-control" id="exampleTextarea1" placeholder="Message" rows="6"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <a href="#" class="btn btn-lg pi-btn-default btn-block rounded">Send</a>
+                        </div>
+                	</form>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div id="map"></div>
+    <!-- #endregion -->
+
     <!-- #region footer -->
     <footer class="dark content">
         <div class="container text-center">
@@ -173,6 +222,26 @@
     <script src="js/jquery.cubeportfolio.min.js"></script>
     <script src="js/lightbox-gallery.js"></script>
     <script src="js/main.js"></script>
+
+    <script src="js/gmaps.js"></script>
+    <script type="text/javascript">
+		var map;
+		$(document).ready(function(){
+            map = new GMaps({
+                el: '#map',
+                lat: -12.043333,
+                lng: -77.028333
+            });
+            map.addMarker({
+                lat: -12.042,
+                lng: -77.028333,
+                title: 'Marker with InfoWindow',
+                infoWindow: {
+                content: '<p>77 Mass. Ave., E14/E15 Seattle, MA 02139-4307 USA</p>'
+                }
+            });
+		});
+	</script>
 
     <script>
         //Animation Wow.js
