@@ -223,13 +223,123 @@
     <!-- #endregion -->
 
     <!-- #region portfolio -->
-    <header id="portfolio" class="section-parallax parallaxBg" style="background-image: url(images/coming-soon.jpg);">
+    <header id="portfolio" class="section-parallax parallaxBg" style="background-image: url(images/portfolio.jpg);">
         <div class="layer"></div>
         <div class="container parallax-content text-center">
             <h1>My Portfolio</h1>
-            <p>This part of my website is under construction. But it is under its way. Thank you for your patience.</p>
+            <p>Here I will compile all my previous work from all my clients and work projects.</p>
         </div><!-- end container -->
     </header>
+
+    <section class="content">
+    	<div class="container">
+        	<div class="row">
+
+            	<div class="portfolioFilter margin-bottom-40 text-center">
+                    <a href="#" data-filter="*" class="current">All Categories</a>
+                    <a href="#" data-filter=".2d">2D</a>
+                    <a href="#" data-filter=".3d">3D</a>
+                    <a href="#" data-filter=".android">Android</a>
+                    <a href="#" data-filter=".animation">Animation</a>
+                    <a href="#" data-filter=".arduino">Arduino</a>
+                    <a href="#" data-filter=".blockchain">Blockchain</a>
+                    <a href="#" data-filter=".database">Database</a>
+                    <a href="#" data-filter=".desktop">Desktop</a>
+                    <a href="#" data-filter=".game">Game</a>
+                    <a href="#" data-filter=".website">Website</a>
+                </div>
+
+            	 <div class="portfolioContainer grid-3-space">
+
+                    <div class="item 3d blockchain game">
+                        <div class="portfolio-layer"></div>
+                        <img src="images/thumbnail-3dsolitaire.jpg" alt="image">
+                        <div class="work-description">
+                            <a href="3dsolitaire.html">
+                                <div class="plus">
+                                    <i class="fa fa-folder-open"></i>
+                                </div>
+                            </a>
+                            <h6>3D Solitaire</h6>
+                            <p><i class="fa fa-tag margin-right-5"></i>3D, Blockchain, Game</p>
+                        </div><!-- end work-description -->
+                    </div><!-- end item -->
+
+                    <div class="item 2d blockchain game website">
+                        <div class="portfolio-layer"></div>
+                        <img src="images/thumbnail-web3solitaire.jpg" alt="image">
+                        <div class="work-description">
+                            <a href="web3solitaire.html">
+                                <div class="plus">
+                                    <i class="fa fa-folder-open"></i>
+                                </div>
+                            </a>
+                            <h6>Web3 Solitaire</h6>
+                            <p><i class="fa fa-tag margin-right-5"></i>2D, Blockchain, Game, Website</p>
+                        </div><!-- end work-description -->
+                    </div><!-- end item -->
+
+                    <div class="item android arduino database">
+                        <div class="portfolio-layer"></div>
+                        <img src="images/thumbnail-energymeter.jpg" alt="image">
+                        <div class="work-description">
+                            <a href="energymeterapp.html">
+                                <div class="plus">
+                                    <i class="fa fa-folder-open"></i>
+                                </div>
+                            </a>
+                            <h6>Energy Meter App</h6>
+                            <p><i class="fa fa-tag margin-right-5"></i>Android, Arduino, Database</p>
+                        </div><!-- end work-description -->
+                    </div><!-- end item -->
+
+                    <div class="item website">
+                        <div class="portfolio-layer"></div>
+                        <img src="images/thumbnail-cryptosolitaire.jpg" alt="image">
+                        <div class="work-description">
+                            <a href="cryptosolitaire.html">
+                                <div class="plus">
+                                    <i class="fa fa-folder-open"></i>
+                                </div>
+                            </a>
+                            <h6>cryptosolitaire.io</h6>
+                            <p><i class="fa fa-tag margin-right-5"></i>Website</p>
+                        </div><!-- end work-description -->
+                    </div><!-- end item -->
+
+                    <div class="item database desktop website">
+                        <div class="portfolio-layer"></div>
+                        <img src="images/thumbnail-carms.jpg" alt="image">
+                        <div class="work-description">
+                            <a href="carms.html">
+                                <div class="plus">
+                                    <i class="fa fa-folder-open"></i>
+                                </div>
+                            </a>
+                            <h6>Chemical Analysis Results Management System</h6>
+                            <p><i class="fa fa-tag margin-right-5"></i>Database, Desktop, Website</p>
+                        </div><!-- end work-description -->
+                    </div><!-- end item -->
+
+                    <div class="item 2d animation desktop game">
+                        <div class="portfolio-layer"></div>
+                        <img src="images/thumbnail-stigmata.jpg" alt="image">
+                        <div class="work-description">
+                            <a href="stigmata.html">
+                                <div class="plus">
+                                    <i class="fa fa-folder-open"></i>
+                                </div>
+                            </a>
+                            <h6>Stigmata Project</h6>
+                            <p><i class="fa fa-tag margin-right-5"></i>2D, Animation, Desktop, Game</p>
+                        </div><!-- end work-description -->
+                    </div><!-- end item -->
+
+            	</div>
+
+            </div><!-- end row -->
+        </div><!-- end container -->
+    </section>
     <!-- #endregion -->
 
     <!-- #region contact me-->
@@ -332,6 +442,7 @@
     <script src="js/jquery.countTo.js"></script>
     <script src="js/jquery.placeholder.js"></script>
     <script src="js/jquery.parallax-1.1.3.js"></script>
+    <script src="js/isotope.pkgd.min.js"></script>
     <script src="js/wow.min.js"></script>
     <script src="js/jquery.sticky.js"></script>
     <script src="js/jquery.cubeportfolio.min.js"></script>
@@ -339,6 +450,36 @@
     <script src="js/main.js"></script>
     <script src="js/smoothscroll.js"></script>
 
+    <script>
+		$(window).load(function(){
+			var $container = $('.portfolioContainer');
+			$container.isotope({
+				filter: '*',
+				animationOptions: {
+					duration: 750,
+					easing: 'linear',
+					queue: false
+				}
+			});
+
+			$('.portfolioFilter a').click(function(){
+				$('.portfolioFilter .current').removeClass('current');
+				$(this).addClass('current');
+
+				var selector = $(this).attr('data-filter');
+				$container.isotope({
+					filter: selector,
+					animationOptions: {
+						duration: 750,
+						easing: 'linear',
+						queue: false
+					}
+				 });
+				 return false;
+			});
+		});
+    </script>
+    
     <script>
         //Animation Wow.js
         new WOW().init();
