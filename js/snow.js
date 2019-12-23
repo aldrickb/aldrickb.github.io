@@ -14,8 +14,8 @@ var flakes = [],
     mX = -100,
     mY = -100
 
-    canvas.width = window.innerWidth;
-    canvas.height = window.innerHeight;
+    canvas.width = $("#top").innerWidth();
+    canvas.height = $("#top").innerHeight();
 
 function snow() {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
