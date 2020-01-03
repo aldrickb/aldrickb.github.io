@@ -374,7 +374,7 @@
                 </div>
                 <div class="col-md-7 padd">
                     <h5 class="heading heading-v3"><span>Get in touch</span></h5>
-                    <form action="https://formspree.io/mgewkzne" method="POST" >
+                    <form id="contactusform" action="https://formspree.io/mgewkzne" method="POST" >
                         <div class="form-group">
                             <input type="text" name="Name" id="Name" class="form-control" placeholder="Name" required>
                         </div>
@@ -385,7 +385,7 @@
                             <textarea name="Message" id="Message" class="form-control" placeholder="Message" rows="6" required></textarea>
                         </div>
                         <div class="form-group">
-                            <button type="submit" class="btn btn-lg pi-btn-default btn-block rounded">Send</button>
+                            <button onclick="submitForm()" type="button" class="btn btn-lg pi-btn-default btn-block rounded">Send</button>
                         </div>
                     </form>
                 </div>
@@ -517,6 +517,11 @@
                 }
             }).scroll();
         });
+
+        function submitForm(){
+            if( $("#Email").val() == "hello@aldrickb.com" ) alert("Invalid Email");
+            else document.getElementById("contactusform").submit();
+        }
     </script>
     <!-- #endregion -->
 </body>
