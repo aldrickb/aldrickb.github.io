@@ -1,7 +1,7 @@
 
 # aldrickb.github.io
 
-![aldrickb logo](https://aldrickb.com/images/logo2.png =100x100)
+<img src="https://aldrickb.com/images/logo2.png " width="100">
 
 
 
