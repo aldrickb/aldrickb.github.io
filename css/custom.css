@@ -1,5 +1,5 @@
 .profile{
-    background: url("../images/profile.jpg");
+    background: url("../images/profile.webp"), url("../images/profile.jpg");
     background-size:     cover;
     background-repeat:   no-repeat;
     background-position: center center;
