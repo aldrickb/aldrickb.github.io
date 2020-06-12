@@ -507,30 +507,6 @@
     </script>
 
     <script>
-        $(document).ready(function(){
-            $('#nav a').on('click', function() {
-                var scrollAnchor = $(this).attr('data-scroll'),
-                    scrollPoint = $('section[data-anchor="' + scrollAnchor + '"]').offset().top - 69;
-                $('body,html').animate({
-                    scrollTop: scrollPoint
-                }, 500);
-                return false;
-            })
-            $(window).scroll(function() {
-                var windscroll = $(window).scrollTop();
-                if (windscroll >= 100) {
-                    $('section[data-anchor]').each(function(i) {
-                        if ($(this).position().top <= windscroll + 71) {
-                            $('#nav li.zm-active').removeClass('zm-active');
-                            $('#nav li.nav').eq(i).addClass('zm-active');
-                        }
-                    });
-                } else {
-                    $('#nav li.zm-active').removeClass('zm-active');
-                }
-            }).scroll();
-        });
-
         function submitForm(){
             if( $("#Email").val() == "hello@aldrickb.com" ) alert("Invalid Email");
             else document.getElementById("contactusform").submit();
